@@ -20,7 +20,8 @@ header{
     z-index: 100;
 }
 header a{
-    color: #eee;
+    color: #856d6d;
+    font-weight: bold;
     margin-right: 40px;
 }
 /* carousel */
