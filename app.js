@@ -47,4 +47,15 @@ function showSlider(type){
         next.click();
     }, timeAutoNext)
 }
+// create fingerprint system
+import FingerprintJS from "@fingerprintjs/fingerprintjs-pro";
+
+const fpPromise = FingerprintJS.load({
+  apiKey: 'your-public-api-key'
+});
+
+// Get the visitor identifier when you need it.
+fpPromise
+  .then(fp => fp.get())
+  .then(result => console.log(result.visitorId));
 
