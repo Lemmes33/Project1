@@ -344,6 +344,10 @@ header a{
     display: flex;
     justify-content: center;
     align-items: fill;
-    background: rgb(16,2,241);
-background: linear-gradient(90deg, rgba(16,2,241,1) 0%, rgba(10,8,145,1) 0%, rgba(9,9,121,1) 0%, rgba(119,7,26,1) 50%, rgba(1,35,113,1) 100%);;
+}
+.slide1 video{
+    object-fit: fill;
+}
+.slide1 .content{
+    
 }
