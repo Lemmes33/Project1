@@ -9,8 +9,8 @@ let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
 let timeDom = document.querySelector('.carousel .time');
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-let timeRunning = 3000;
-let timeAutoNext = 10000;
+let timeRunning = 2000;
+let timeAutoNext = 4000;
 
 nextDom.onclick = function(){
     showSlider('next');    
@@ -47,15 +47,3 @@ function showSlider(type){
         next.click();
     }, timeAutoNext)
 }
-// create fingerprint system
-import FingerprintJS from "@fingerprintjs/fingerprintjs-pro";
-
-const fpPromise = FingerprintJS.load({
-  apiKey: 'your-public-api-key'
-});
-
-// Get the visitor identifier when you need it.
-fpPromise
-  .then(fp => fp.get())
-  .then(result => console.log(result.visitorId));
-

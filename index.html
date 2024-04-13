@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOP SECURITY</title>
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/arrow-left-r.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/arrow-right-r.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="evo-calendar.midnight-blue.min.css">
+    <link rel="stylesheet" href="evo-calendar.min.css">
   </head>
   <body>
     <section>
@@ -19,7 +29,7 @@
           </div>
           <a href="">Home</a>
           <a href="">Contact us</a>
-          <a href="">About</a>
+          <a href="">Info</a>
         </nav>
       </header>
 
@@ -42,7 +52,7 @@
                 security guard training might be the perfect first step for you.
               </div>
               <div class="buttons">
-                <button><a href="#slide1">ABOUT</a></button>
+                <button><a href="#slide1">REGISTER</a></button>
               </div>
             </div>
           </div>
@@ -137,7 +147,6 @@
         </div>
         <!-- next prev -->
 
-
         <div class="arrows">
           <button id="prev"><</button>
           <button id="next">></button>
@@ -146,46 +155,133 @@
         <div class="time"></div>
       </div>
     </section>
-    <section class="slide1" id="slide1">
-      <video autoplay muted loop>
-        <source
-          src="./image/WhatsApp Video 2024-04-12 at 10.46.51.mp4"
-          type="video/mp4"
-        />
-      </video>
-      <div class="content">
-        <h3>
-          Level Up Security: Ditch the Punch Clock, Embrace Fingerprint Check-In
-          & Join Our Elite Team!
-        </h3>
-        <h4>Modern guard management demands modern solutions.</h4>
-        <p>
-          Our system replaces antiquated punch clocks with secure fingerprint
-          recognition. This eliminates buddy punching, ensures only authorized
-          personnel clock in, and streamlines the entire process.
-        </p>
-
-        <h3>Benefits you'll love:</h3>
-
-        <p>
-          Effortless for guards: A quick scan clocks them in, saving valuable
-          time. Unmatched security: Fingerprint verification prevents
-          unauthorized access and buddy punching. Simplified management:
-          Accurate timekeeping data leads to better payroll management and
-          reduced administrative tasks. Our system seamlessly integrates with
-          your existing guard management software, so you can experience the
-          power of fingerprint security without disrupting your workflow. Ready
-          to join a team that prioritizes cutting-edge security? Apply to be a
-          part of our elite security guard organization in the form below!
-        </p>
+    <section class="slide1"id="slide1">
+      <div class="containerforms">
+        <!-- creatin form  -->
+        <form action="" method="post">
+          <h2>Registration</h2>
+          <div class="content1">
+            <div class="input-box">
+              <label for="Full Name">Full Name</label>
+              <input type="text" placeholder="Enter full name" name="name" required>
+            </div>
+            <div class="input-box">
+              <label for="username">User Name</label>
+              <input type="text" placeholder="Enter username" name="uname" required>
+            </div>
+            <div class="input-box">
+              <label for="Email">Email</label>
+              <input type="email" placeholder="Enter your valid email address" name="email" required>
+            </div>
+            <div class="input-box">
+              <label for="Phone number">Phone number</label>
+              <input type="tel" placeholder="Enter phone number" name="phone" required>
+            </div>
+            <div class="input-box">
+              <label for="Password">Password</label>
+              <input type="password" placeholder="Enter new password" name="name" required>
+            </div>
+            <div class="input-box">
+              <label for="confirm-password">confirm-password</label>
+              <input type="password" placeholder="Confirm your password" name="ConfirmPassword" required>
+            </div>
+            <span class="gender-title">Gender</span>
+            <div class="gender-category">
+              <input type="radio" name="gender" id="male">
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="female">
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="/them">
+              <label for="they/them">They/Them</label>
+              
+            </div>
+          </div>
+          <div class="alert">
+            <p>
+              By clicking Sign Up, you agree to our <a href="#">Terms,</a><a href="#">Private Policy,</a> and <a href="#">Cookies Policy</a> You may receive sms notifications from us and can oopt out at any time
+            </p>
+          </div>
+          <div class="button-container">
+            <button>Register</button>
+          </div>
+        </form>
       </div>
     </section>
     <section class="slide2" id="slide2">
-      <div class="container"></div>
-    </section>
-    <section class="slide3" id="slide23">
+      
+      <h1>
+          Welcome back!</h1>
+
+<h3>Today's Date: April 13, 2024  </h>
+<h3>Check-In Status: Not Checked In</h3>
+
+<h3></h3>Attention Guards! Don't forget to complete your fingerprint scan for today's check-in.</h3>
+
+<h1>Please note </h1>:<h3> This is just an example. You'll need to replace "Not Checked In" with "Checked In" if the user has completed the check-in process and update the event notice with relevant information for your specific needs.</h3>
+        </p>
+      </h3>
+      <!-- inserting a calendar -->
+      <div class="hero"></div>
+      <div id="calendar"></div>
+        </section>
+    <section id="slide3"id="slide3">
       <img src="image/duty calls.webp" />
     </section>
+  </section>
+  <section id="slide4"id="slide4">
+    <img src="image/Hire PSO, Personal Security Officer, Bodyguard Services in Delhi NCR.jpeg" />
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="evo-calendar.min.js"></script>
     <script src="app.js"></script>
+
+    <script>
+        $(document).ready(function() {
+           $('#calendar').evoCalendar({
+            
+            calendarEvents: [
+      {
+        id: 'event', // Event's ID (required)
+        name: "New Year", // Event name (required)
+        date: "January/1/2020", // Event date (required)
+        type: "holiday", // Event type (required)
+        everyYear: true // Same event every year (optional)
+      },
+      {
+        name: "Vacation Leave",
+        badge: "02/13 - 02/15", // Event badge (optional)
+        date: ["February/13/2020", "February/15/2020"], // Date range
+        description: "Vacation leave for 3 days.", // Event description (optional)
+        type: "event",
+        color: "#63d867" // Event custom color (optional)
+      },
+      {
+      id: 'event', // Event's ID (required)
+        name: "birthday", // Event name (required)
+        date: "February/21/2020", // Event date (required)
+        type: "holiday", // Event type (required)
+        everyYear: true // Same event every year (optiona
+      },{
+        id: 'event', // Event's ID (required)
+        name: "fools day", // Event name (required)
+        date: "April/1/2020", // Event date (required)
+        type: "holiday", // Event type (required)
+        everyYear: true // Same event every year (optiona
+      },{
+        id: 'event', // Event's ID (required)
+        name: "Red Cross Walk", // Event name (required)
+        date: "April/21/2020", // Event date (required)
+        type: "holiday", // Event type (required)
+        description: "All Security Guards are expected to join in the walk", // Event description (optional)
+        everyYear: true // Same event every year (optiona
+      }
+    ]
+            
+    })
+})
+
+    </script>
   </body>
 </html>
